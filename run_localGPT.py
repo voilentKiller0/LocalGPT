@@ -132,7 +132,6 @@ def load_model(device_type, model_id, model_basename=None):
 
 
 device_type = "cuda" if torch.cuda.is_available() else "cpu"
-show_sources = True # Show sources along with answers (Default is True)
 
 
 def main():
@@ -148,8 +147,7 @@ def main():
     """
 
     logging.info(f"Running on: {device_type}")
-    logging.info(f"Display Source Documents set to: {show_sources}")
-
+    
     embeddings = HuggingFaceInstructEmbeddings(model_name=EMBEDDING_MODEL_NAME, model_kwargs={"device": device_type})
 
     # uncomment the following line if you used HuggingFaceEmbeddings in the ingest.py
