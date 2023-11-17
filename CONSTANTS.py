@@ -6,12 +6,6 @@ from langchain.document_loaders import CSVLoader, PDFMinerLoader, TextLoader, Un
 # load_dotenv()
 ROOT_DIRECTORY = "./"
 
-#Create necessary folder
-if os.path.isdir(ROOT_DIRECTORY+"SOURCE_DOCUMENTS") == False:
-  os.mkdir(ROOT_DIRECTORY+"SOURCE_DOCUMENTS")
-if os.path.isdir(ROOT_DIRECTORY+"DB") == False:
-  os.mkdir(ROOT_DIRECTORY+"DB")
-
 # Define the folder for storing database
 SOURCE_DIRECTORY = f"{ROOT_DIRECTORY}/SOURCE_DOCUMENTS"
 
