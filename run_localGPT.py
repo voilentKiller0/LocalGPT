@@ -188,6 +188,7 @@ def main():
         query = input("\nEnter a query: ")
         if query == "exit":
             break
+        print ("waiting...")
         # Get the answer from the chain
         res = qa(query)
         answer, docs = res["result"], res["source_documents"]
