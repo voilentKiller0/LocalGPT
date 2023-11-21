@@ -30,6 +30,3 @@ Streamlit-extras
 
 # Excel File Manipulation
 openpyxl
-
-
-tensorflow==2.15.0
