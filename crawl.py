@@ -17,7 +17,7 @@ def logToFile(logentry):
 @click.command()
 @click.option(
     "--device_type",
-    default="cuda",
+    default="cuda" if torch.cuda.is_available() else "cpu",
     type=click.Choice(
         [
             "cpu",
